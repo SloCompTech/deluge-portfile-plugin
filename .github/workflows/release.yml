@@ -19,6 +19,7 @@ jobs:
           sudo apt update
           sudo apt install libcairo2-dev libgirepository1.0-dev
           python -m pip install --upgrade pip
+          python -m pip install --upgrade setuptools
           pip install -r requirements.txt
       - name: Build egg
         run: python3 setup.py bdist_egg

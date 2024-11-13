@@ -1,0 +1,14 @@
+[Unit]
+Description=Service for 
+After=network.target
+
+[Service]
+User=root
+Group=root
+WorkingDirectory=<setup project directory>
+ExecStart=python natpmpc.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
